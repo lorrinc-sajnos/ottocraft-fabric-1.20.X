@@ -1,6 +1,8 @@
 package com.lorrinc_sajnos.ottocraft.item;
 
 import com.lorrinc_sajnos.ottocraft.Ottocraft;
+import com.lorrinc_sajnos.ottocraft.item.itemgroups.ModItemGroup;
+import com.lorrinc_sajnos.ottocraft.item.itemgroups.ModItemGroups;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -16,36 +18,12 @@ import java.util.List;
 
 
 public class ModItems {
-    public enum ModItemGroups {
-        INGREDIENT,
-        MODTAB;
-
-        private final List<Item> items;
-        //private final RegistryKey<ItemGroup> group;
-        private ModItemGroups() {
-            this(ItemGroups.INGREDIENTS);
-        }
-
-        private ModItemGroups(RegistryKey<ItemGroup> group){
-            items = new ArrayList<>();
-
-            ItemGroupEvents.modifyEntriesEvent(group).register((FabricItemGroupEntries entry) -> addItemsToGroup(entry, items));
-        }
-        private static void addItemsToGroup(FabricItemGroupEntries entries, List<Item> group) {
-            for (Item item : group) {
-                entries.add(item);
-            }
-        }
-        void add(Item item){
-            items.add(item);
-        }
-    }
 
 
-    public static final Item RAW_URANIUM_ORE = registerItem("raw_uranium_ore", new ModItem(), ModItemGroups.INGREDIENT);
-    public static final Item POLISHED_LUNAR_CRYSTAL = registerItem("polished_lunar_crystal", new ModItem(), ModItemGroups.INGREDIENT);
-    public static final Item RUBY_INGOT = registerItem("ruby_ingot", new ModItem(), ModItemGroups.INGREDIENT);
-    public static final Item CHEESE = registerItem("cheese", new ModItem(), ModItemGroups.INGREDIENT);
+    public static final Item RAW_URANIUM_ORE = registerItem("raw_uranium_ore", new ModItem(), ModItemGroups.MOD_INGREDIENTS);
+    public static final Item POLISHED_LUNAR_CRYSTAL = registerItem("polished_lunar_crystal", new ModItem(), ModItemGroups.MOD_INGREDIENTS);
+    public static final Item RUBY_INGOT = registerItem("ruby_ingot", new ModItem(), ModItemGroups.MOD_INGREDIENTS);
+    public static final Item CHEESE = registerItem("cheese", new ModItem(), ModItemGroups.MOD_INGREDIENTS);
 
 
 
@@ -54,9 +32,9 @@ public class ModItems {
         return Registry.register(Registries.ITEM, new Identifier(Ottocraft.MOD_ID, name), item);
     }
 
-    private static Item registerItem(String name, Item item, ModItemGroups group) {
+    private static Item registerItem(String name, Item item, ModItemGroup group) {
         Item result = registerItem(name, item);
-        group.add(result);
+        group.addItem(result);
         return result;
     }
 

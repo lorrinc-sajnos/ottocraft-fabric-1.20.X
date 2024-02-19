@@ -12,13 +12,5 @@ import net.minecraft.util.Identifier;
 import static com.lorrinc_sajnos.ottocraft.Ottocraft.MOD_ID;
 
 public class ModItemGroups {
-    public static final ItemGroup MOD_INGREDIENTS = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(MOD_ID,"otc_ingredients"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroups.otc_ingredients"))
-                    .icon(() -> new ItemStack(ModItems.RAW_URANIUM_ORE))
-                    .entries( ((displayContext, entries) -> {
-
-                    }))
-                    .build()
-    );
+    public static final ModItemGroup MOD_INGREDIENTS = new ModItemGroup("otc_ingredients");
 }
