@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "ottocraft",
+	"version": "${version}",
+	"name": "Ottocraft",
+	"description": "An old dream come true",
+	"authors": [
+		"lorrinc_sajnos"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/ottocraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.lorrinc_sajnos.ottocraft.Ottocraft"
+		],
+		"client": [
+			"com.lorrinc_sajnos.ottocraft.OttocraftClient"
+		],
+		"fabric-datagen": [
+			"com.lorrinc_sajnos.ottocraft.OttocraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"ottocraft.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
