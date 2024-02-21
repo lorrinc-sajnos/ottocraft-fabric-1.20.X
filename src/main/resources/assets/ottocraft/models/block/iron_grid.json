@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "ottocraft:blocks/iron_grid"
+        "all": "ottocraft:block/iron_grid"
     }
 }

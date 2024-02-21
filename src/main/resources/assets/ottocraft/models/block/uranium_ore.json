@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "ottocraft:blocks/uranium_ore"
+        "all": "ottocraft:block/uranium_ore"
     }
 }

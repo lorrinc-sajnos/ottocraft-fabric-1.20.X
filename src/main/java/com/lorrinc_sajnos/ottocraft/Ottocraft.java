@@ -1,5 +1,6 @@
 package com.lorrinc_sajnos.ottocraft;
 
+import com.lorrinc_sajnos.ottocraft.block.ModBlocks;
 import com.lorrinc_sajnos.ottocraft.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -21,6 +22,7 @@ public class Ottocraft implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 
 		LOGGER.info("Hello Fabric world!");
 	}

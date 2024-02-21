@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "ottocraft:blocks/lunar_soil"
+        "all": "ottocraft:block/lunar_soil"
     }
 }

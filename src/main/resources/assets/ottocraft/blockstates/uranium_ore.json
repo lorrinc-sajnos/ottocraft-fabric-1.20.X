@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "ottocraft:uranium_ore" }
+        "": { "model": "ottocraft:block/uranium_ore" }
     }
 }

@@ -12,5 +12,5 @@ import net.minecraft.util.Identifier;
 import static com.lorrinc_sajnos.ottocraft.Ottocraft.MOD_ID;
 
 public class ModItemGroups {
-    public static final ModItemGroup MOD_INGREDIENTS = new ModItemGroup("otc_ingredients");
+    public static final ModItemGroup MOD_INGREDIENTS = new ModItemGroup("otc_ingredients", () -> new ItemStack(ModItems.RUBY_INGOT));
 }

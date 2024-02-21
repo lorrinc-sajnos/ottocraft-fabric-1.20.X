@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "ottocraft:blocks/silver_ore"
+        "all": "ottocraft:block/silver_ore"
     }
 }

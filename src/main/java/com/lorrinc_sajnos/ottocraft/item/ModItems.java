@@ -32,7 +32,7 @@ public class ModItems {
         return Registry.register(Registries.ITEM, new Identifier(Ottocraft.MOD_ID, name), item);
     }
 
-    private static Item registerItem(String name, Item item, ModItemGroup group) {
+    public static Item registerItem(String name, Item item, ModItemGroup group) {
         Item result = registerItem(name, item);
         group.addItem(result);
         return result;
