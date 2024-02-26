@@ -17,7 +17,7 @@ import net.minecraft.util.Identifier;
 import java.util.HashMap;
 
 public class ModBlocks {
-    public static final Block URANIUM_ORE = registerBlock("uranium_ore", new ModBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE).luminance(5)), ModItemGroups.MOD_INGREDIENTS);
+    public static final Block URANIUM_ORE = registerBlock("uranium_ore", new ModExpBlock(FabricBlockSettings.copyOf(Blocks.MAGMA_BLOCK).luminance(5),2,5), ModItemGroups.MOD_INGREDIENTS);
 
 
 

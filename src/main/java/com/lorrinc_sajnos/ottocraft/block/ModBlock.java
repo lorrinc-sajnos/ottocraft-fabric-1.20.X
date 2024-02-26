@@ -7,6 +7,8 @@ public class ModBlock extends Block {
     public ModBlock() {
         super(FabricBlockSettings.create());
     }
+
+
     public ModBlock(Settings settings) {
         super(settings);
     }
