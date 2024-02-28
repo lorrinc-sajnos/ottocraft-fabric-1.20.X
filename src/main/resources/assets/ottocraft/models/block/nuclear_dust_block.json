@@ -1,7 +1,6 @@
 {
-    "parent": "block/carpet",
+    "parent": "minecraft:block/carpet",
     "textures": {
-        "particle": "ottocraft:block/nuclear_dust_block",
         "wool": "ottocraft:block/nuclear_dust_block"
     }
 }
